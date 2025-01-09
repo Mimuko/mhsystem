@@ -1,0 +1,221 @@
+@use "base/variables" as v;
+@use "base/mixin" as m;
+
+/*--------------------------------
+	header.css
+--------------------------------*/
+
+.logo {
+    @include m.mq(xl) {
+        margin-left: 100px;
+    }
+}
+
+.logoImg {
+    width: 180px;
+    @include m.mq {
+        width: 316px;
+    }
+}
+
+.headerNav {
+    display: none;
+}
+
+.navLinkTxt {
+    width: max-content;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 8px;
+    background: v.$accent-color;
+    @include m.mq(lg) {
+        padding: 15px 20px;
+    }
+    @include m.mq(xl) {
+        padding: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 10;
+        background: transparent;
+    }
+    & .telLink {
+        flex-shrink: 0;
+    }
+    & .telLinkTxt {
+        font-size: 25px;
+        color: v.$white-color;
+    }
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: v.$accent-color;
+        z-index: 10;
+    }
+}
+
+.headerInr {
+    @include m.mq {
+        @include m.flex(center, space-between);
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.headerNav {
+    @include m.mq(xl) {
+        display: flex;
+        justify-content: flex-end;
+        flex: 1;
+        & .links {
+            @include m.flex(center, flex-end);
+            flex: 1;
+            column-gap: 30px;
+        }
+    }
+}
+
+
+/*--------------------------------
+	hamburger menu
+--------------------------------*/
+
+.hamburger {
+    @include m.flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 5;
+    margin-left: auto;
+    width: 42px;
+    height: 43px;
+    cursor: pointer;
+    text-align: center;
+    @include m.mq(lg) {
+        top: 25px;
+    }
+    & .span {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        left: 0;
+        background: v.$white-color;
+        transition: 0.2s ease-in-out;
+        &:nth-child(1) {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 10px;
+        }
+        &:nth-child(3) {
+            top: 20px;
+        }
+    }
+}
+
+.hamburger.active {
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.6s;
+    transform: rotate(45deg);
+    top: 10px;
+    right: 10px;
+    & .span {
+        background: v.$black-color;
+        &:nth-child(2) {
+            width: 0px;
+        }
+        &:nth-child(1),
+        &:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+        &:nth-child(1) {
+            transform: translateY(24px);
+        }
+        &:nth-child(3) {
+            transform: translateY(3px) rotate(90deg);
+        }
+    }
+}
+
+.globalMenuSp {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    background: v.$white-color;
+    text-align: left;
+    width: 100%;
+    height: fit-content;
+    opacity: 0;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    padding: 50px 0 0;
+    letter-spacing: normal;
+    display: none;
+    &.active {
+        opacity: 1;
+        display: block;
+    }
+}
+
+.hUl {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hamburgerList {
+    position: relative;
+    list-style-type: none;
+    width: 100%;
+    transition: 0.4s;
+    &:not(:last-of-type) {
+        &>.navLink {
+            color: v.$black-color;
+            border-bottom: 1px solid rgb(229, 229, 229, .7);
+        }
+    }
+    &:has(.normalBtn) {
+        @include m.flex;
+    }
+    &>.navLink {
+        width: inherit;
+        @include m.flex;
+        text-decoration: none;
+        transition: 0.4s;
+        width: 100%;
+        max-width: unset;
+        padding: 16px 0;
+    }
+    & .normalBtn {
+        max-width: 80%;
+        padding: 10px 0;
+        margin: 13px 0;
+    }
+    & .telLinkTxt {
+        color: v.$black-color;
+    }
+}
+
+@include m.mq(xl) {
+    .hamburger {
+        display: none;
+    }
+    .hamburger .span:nth-child(1) {
+        top: 0px;
+    }
+    .hamburger .span:nth-child(2) {
+        top: 15px;
+    }
+    .hamburger .span:nth-child(3) {
+        top: 30px;
+    }
+    .hamburger.active .span:nth-child(3) {
+        transform: translateY(-7px) rotate(90deg);
+    }
+}

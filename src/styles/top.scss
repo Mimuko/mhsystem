@@ -1,0 +1,541 @@
+@use "base/variables" as v;
+@use "base/mixin" as m;
+
+/*--------------------------------
+	COMMON
+--------------------------------*/
+
+.decorationTxt {
+    display: none;
+    @include m.mq(xl) {
+        display: block;
+    }
+}
+
+
+/*--------------------------------
+	FIRST VIEW
+--------------------------------*/
+
+.firstView {
+    background: linear-gradient(116.27deg, #003589 0%, #3085D0 18.31%, #112B83 72.08%);
+    position: relative;
+    padding: 0 0 40px 40px;
+    @include m.mq(lg) {
+        padding: 0 0 77px;
+    }
+    @include m.mq(xl) {
+        padding: 100px 0 77px;
+    }
+}
+
+.firstViewImg {
+    @include m.mq(lg) {
+        max-width: 1340px;
+        margin-left: auto;
+    }
+    & .img {
+        height: auto;
+        max-height: 690px;
+        min-height: 400px;
+    }
+}
+
+.firstViewCopy {
+    display: none;
+    @include m.mq(xl) {
+        display: block;
+        position: absolute;
+        bottom: 18px;
+        right: 40px;
+        color: rgba(255, 255, 255, .5);
+        font-family: v.$alpha-font;
+        font-size: 110px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        transform: skewX(-18deg);
+    }
+}
+
+.firstViewHead {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: v.$white-color;
+    @include m.mq(lg) {
+        bottom: 80px;
+    }
+    @include m.mq(xl) {
+        bottom: -70px;
+        left: -170px;
+    }
+}
+
+.firstViewDesc {
+    @include m.flex(baseline, flex-start);
+    border-bottom: 3px solid v.$white-color;
+    padding-bottom: 5px;
+    transform: skewX(-10deg);
+    @include m.mq(xl) {
+        transform: skewX(-15deg);
+    }
+}
+
+.firstViewDescLarge,
+.firstViewDescSmall {
+    font-weight: 900;
+    letter-spacing: 0.03em;
+}
+
+.firstViewDescLarge {
+    font-size: 18px;
+    @include m.mq(lg) {
+        font-size: 32px;
+    }
+}
+
+.firstViewDescSmall {
+    font-size: 16px;
+    @include m.mq(lg) {
+        font-size: 26px;
+    }
+}
+
+.firstViewTtl {
+    font-size: 18px;
+    @include m.mq {
+        font-size: 32px;
+    }
+    @include m.mq(lg) {
+        @include m.flex(flex-start, center);
+        flex-direction: column;
+        font-size: 47px;
+    }
+    >* {
+        transform: skewX(-10deg);
+        font-weight: 900;
+        @include m.mq(xl) {
+            transform: skewX(-15deg);
+        }
+    }
+}
+
+.firstViewScroll {
+    display: none;
+    @include m.mq(xl) {
+        @include m.flex(flex-start, flex-start);
+        flex-direction: row-reverse;
+        position: absolute;
+        bottom: 70px;
+        left: 25px;
+    }
+}
+
+.scrollTxt {
+    writing-mode: vertical-rl;
+    font-family: v.$alpha-font;
+    font-size: 14px;
+    color: v.$white-color;
+}
+
+.firstViewScrollImg {
+    width: 10px;
+}
+
+
+/*--------------------------------
+	IMAGE
+--------------------------------*/
+
+.img {
+    width: 100%;
+    display: block;
+}
+
+
+/*--------------------------------
+	ABOUT
+--------------------------------*/
+
+.aboutSection {
+    & .decoration {
+        display: none;
+        @include m.mq(lg) {
+            display: block;
+            position: absolute;
+            top: -80px;
+            right: 0;
+            z-index: -1;
+        }
+    }
+    & .sectionInr {
+        position: relative;
+        @include m.mq(lg) {
+            max-width: 100%;
+            width: 100%;
+        }
+        @include m.mq(xl) {
+            padding: 150px 0 135px;
+        }
+    }
+    & .sectionHead {
+        align-items: flex-start;
+    }
+    & .txt {
+        margin-bottom: 40px;
+    }
+    & .flex {
+        @include m.mq(lg) {
+            column-gap: 40px;
+            align-items: flex-end;
+            padding-right: 20px;
+        }
+        @include m.mq(xl) {
+            column-gap: 80px;
+            padding-right: 0;
+        }
+    }
+    & .txtBox {
+        @include m.mq(xl) {
+            flex: 1;
+        }
+    }
+    & .largeImgBox {
+        @include m.mq(xl) {
+            flex-basis: 492px;
+        }
+    }
+    & .smallImgBox {
+        display: none;
+        @include m.mq (xl) {
+            display: block;
+            margin-left: 32px;
+            max-width: 295px;
+            width: 100%;
+            align-self: flex-end;
+            margin-bottom: -55px;
+        }
+    }
+    & .normalBtn {
+        @include m.mq(lg) {
+            margin: 0;
+        }
+    }
+}
+
+.sectionSubTtl {
+    font-size: v.$font-size-m;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    font-weight: 700;
+    @include m.mq {
+        font-size: 32px;
+    }
+}
+
+
+/*--------------------------------
+	SERVICE
+--------------------------------*/
+
+.serviceSection {
+    & .sectionHead {
+        margin-bottom: 30px;
+    }
+    & .sectionHeadTtl,
+    & .sectionHeadDesc {
+        color: v.$white-color;
+    }
+    & .normalBtn {
+        background: v.$white-color;
+        border-color: v.$accent-color;
+        &:hover {
+            background: v.$accent-color;
+            & .normalBtnTxt {
+                color: v.$white-color;
+            }
+        }
+    }
+    & .normalBtnTxt {
+        color: v.$accent-color;
+    }
+    & .flex {
+        margin-bottom: 40px;
+        row-gap: 25px;
+        @include m.mq {
+            column-gap: 25px;
+        }
+    }
+    & .txt {
+        margin-bottom: 40px;
+        @include m.mq {
+            text-align: center;
+        }
+    }
+}
+
+.serviceItemHead {
+    background: v.$white-color;
+    @include m.flex;
+    padding: 8px 0;
+}
+
+.serviceItemTtl {
+    color: #0E4270;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+
+/*--------------------------------
+	STRENGTHS
+--------------------------------*/
+
+.strengthsSection {
+    & .decoration {
+        position: absolute;
+    }
+    & .sectionBgImg {
+        top: 0;
+    }
+    & .sectionInr {
+        @include m.mq(xl) {
+            max-width: 1240px;
+            width: 100%;
+        }
+    }
+    & .decorationTxt {
+        margin-bottom: 40px;
+        line-height: 1.1;
+        letter-spacing: 0.06em;
+    }
+    & .flex {
+        @include m.mq(lg) {
+            column-gap: 20px;
+        }
+        @include m.mq(xl) {
+            column-gap: 58px;
+            justify-content: flex-end;
+        }
+    }
+    & .flex-reverse {
+        margin: 40px 0;
+        @include m.mq(lg) {
+            margin: 80px 0;
+            flex-direction: row-reverse;
+        }
+    }
+    & .txtBox {
+        @include m.mq(lg) {
+            // flex: 1;
+        }
+        @include m.mq(xl) {
+            flex-basis: 450px;
+        }
+    }
+    & .imgBox {
+        @include m.mq(xl) {
+            flex-basis: 662px;
+        }
+    }
+}
+
+.h3head {
+    border-left: 4px solid v.$accent-color;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    @include m.mq {
+        padding-left: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+.h3headTtl {
+    font-size: v.$font-size-m;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.h3headDesc {
+    font-size: 14px;
+    color: v.$accent-color;
+    letter-spacing: 0.05em;
+    font-family: v.$alpha-font;
+}
+
+
+/*--------------------------------
+	WORKS
+--------------------------------*/
+
+.worksSection {
+    & .sectionInr {
+        @include m.mq(lg) {
+            padding: 120px 0;
+            column-gap: 36px;
+        }
+    }
+    & .decorationTxt {
+        width: fit-content;
+        height: fit-content;
+        writing-mode: vertical-rl;
+        text-align-last: left;
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        left: 0;
+        font-size: 36px;
+        letter-spacing: 0.02em;
+        line-height: 1.1;
+        white-space: nowrap;
+        z-index: -1;
+    }
+    & .sectionHeadTtl {
+        @include m.mq(lg) {
+            font-size: 70px;
+        }
+    }
+    & .webgene-blog {
+        @include m.flex;
+        flex-direction: column;
+        row-gap: 20px;
+        @include m.mq(lg) {
+            flex-direction: row;
+            column-gap: 15px;
+            align-items: flex-start;
+        }
+    }
+    & .webgene-item {
+        width: 100%;
+        @include m.mq(lg) {
+            max-width: 270px;
+        }
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+    & .newsDate {
+        display: none;
+    }
+    & .news_img {
+        width: 100%;
+        height: 220px;
+        margin-bottom: 10px;
+        @include m.mq {
+            height: 400px;
+        }
+        @include m.mq(lg) {
+            height: 220px;
+        }
+        & a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    & .webgene-item-main-image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/*--------------------------------
+	NEWS
+--------------------------------*/
+
+.newsSection {
+    background: #EEF2F6;
+    & .sectionInr {
+        @include m.mq(lg) {
+            column-gap: 67px;
+        }
+    }
+    & .webgene-blog {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+    }
+    & .webgene-item {
+        &:nth-child(2) {
+            & .newsItem {
+                border-top: 1px solid #E5E5E5;
+                border-bottom: 1px solid #E5E5E5;
+                padding-bottom: 16px;
+            }
+        }
+    }
+}
+
+.newsItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    padding: 16px 0;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        column-gap: 184px;
+    }
+    &:hover {
+        background-color: #edecec;
+        color: inherit;
+    }
+}
+
+
+/*--------------------------------
+	WORKS,NEWS
+--------------------------------*/
+
+.includeSection {
+    position: relative;
+    & .sectionInr {
+        display: grid;
+        @include m.mq(lg) {
+            padding: 120px 0;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto auto;
+        }
+    }
+    & .sectionHead {
+        justify-content: flex-start;
+        @include m.mq(lg) {
+            align-items: flex-start;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    }
+    & .normalBtn {
+        margin-top: 40px;
+        height: fit-content;
+        @include m.mq(lg) {
+            margin: 0;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            width: 100%;
+        }
+    }
+}
+
+.includeArea {
+    position: relative;
+    z-index: 0;
+    @media (min-width: 1024px) {
+        width: 100%;
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+}
+
+.newsTag {
+    display: none;
+}

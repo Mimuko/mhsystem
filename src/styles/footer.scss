@@ -1,0 +1,153 @@
+@use "base/variables" as v;
+@use "base/mixin" as m;
+
+/*--------------------------------
+	FOOTER
+--------------------------------*/
+
+.commonFooter {
+    color: v.$white-color;
+    & .sectionHead {
+        margin-bottom: 30px;
+    }
+    & .sectionHeadTtl,
+    & .sectionHeadDesc {
+        color: v.$white-color;
+    }
+    & .txt {
+        @include m.mq(lg) {
+            text-align: center;
+        }
+    }
+}
+
+.footer {
+    background: v.$footer-color;
+    & .sectionBgImg {
+        display: none;
+        @include m.mq(lg) {
+            display: block;
+            width: 545px;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.footerRow {
+    &.flex {
+        width: 95%;
+        max-width: v.$large-width;
+        margin: 0 auto 56px;
+        align-items: center;
+        padding-top: 80px;
+        position: relative;
+        @include m.mq(lg) {
+            padding-top: 100px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 150px;
+        }
+    }
+}
+
+.footerInfo {
+    @include m.flex;
+    flex-direction: column;
+}
+
+.footerLogo {
+    display: flex;
+    justify-content: center;
+    max-width: 277px;
+    margin-bottom: 24px;
+    @include m.mq {
+        justify-content: flex-start;
+    }
+}
+
+.footerLink {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 25px;
+    justify-content: center;
+    @include m.mq {
+        width: 80%;
+        justify-content: flex-start;
+    }
+    @include m.mq(lg) {
+        column-gap: 25px;
+        row-gap: 20px;
+        width: 100%;
+        max-width: 492px;
+    }
+}
+
+.footerCopy {
+    width: 100%;
+    @include m.flex;
+    padding: 16px 0;
+    position: relative;
+    margin-top: 32px;
+    color: v.$white-color;
+    font-size: 12px;
+    @include m.mq {
+        margin-top: 0;
+        max-width: v.$large-width;
+        margin: 0 auto;
+    }
+    & .txt {
+        font-size: inherit;
+    }
+}
+
+.footerInfoItem {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 16px;
+    column-gap: 16px;
+    @include m.mq(lg) {
+        justify-content: flex-start;
+    }
+}
+
+.footerAddress {
+    text-align: center;
+    @include m.mq(lg) {
+        width: 100%;
+        text-align: left;
+    }
+    & .txt {
+        text-align: center;
+        @include m.mq(lg) {
+            text-align-last: left;
+        }
+    }
+}
+
+.normalBtnArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    margin-top: 16px;
+    @include m.mq(lg) {
+        max-width: 710px;
+        margin: 32px auto 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @include m.mq(lg) {
+        column-gap: 80px;
+    }
+    & .tel {
+        width: 100%;
+        margin: 0;
+    }
+    & .telLinkTxt {
+        color: v.$white-color;
+    }
+}

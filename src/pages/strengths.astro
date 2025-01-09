@@ -1,0 +1,125 @@
+---
+import '../styles/base/_mixin.scss';
+import '../styles/base/_reset.scss';
+import '../styles/base/_variables.scss';
+import '../styles/header.scss';
+import '../styles/footer.scss';
+import '../styles/common.scss';
+import '../styles/strengths.scss';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "会社の強み｜エム・エイチ・システム株式会社";
+const siteDomein = "https://m-h-system.co.jp/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <div class="content">
+        <div class="pageHeader">
+            <div class="pageHeaderBg">
+                <div class="pageHeaderGroup">
+                    <p class="pageHeaderDesc">Strengths</p>
+                    <h1 class="pageHeaderFront">会社の強み</h1>
+                </div>
+                <img width="1440" height="450" src={siteDomein + '20240818112004917089.png'} alt="会社の強み" class="pageHeaderImg" width="1411" height="420" />
+            </div>
+        </div>
+        <div class="section sectionBg">
+            <div class="sectionBgImg fitImg">
+                <img src={siteDomein + '20240818130504970639.png'} alt="背景用の画像" width="1440" height="1255" class="img" />
+            </div>
+            <div class="sectionInr mainContent">
+                <div class="flex">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h2 class="txtBoxHeadTtl">あらゆる製品の保管に<br>対応可能</h2>
+                        </div>
+                        <p class="txt">
+                            エム・エイチ・システム株式会社は、幅広い種類の製品に対して柔軟に保管サービスを提供しています。<br>
+                            <br>
+                            高い技術力と豊富な経験を持つスタッフが、お客様の特定の要求に合わせて最適なソリューションを提案します。<br>
+                            環境管理、地震対策など、あらゆる面でのサポートが可能です。<br>
+                            <br>
+                            効率的な運用と高品質なサービスを実現し、安心してご利用いただける保管環境を提供します。
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <p class="imgBoxTtl">Storage of all products</p>
+                        <img src={siteDomein + '20240818112004495401.png'} alt="背景用の画像" width="742" height="402" class="img" />
+                    </div>
+                </div>
+
+                <div class="flex flex-reverse">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h2 class="txtBoxHeadTtl">保管改善の長年の実績</h2>
+                        </div>
+                        <p class="txt">
+                        エム・エイチ・システム株式会社は、蓄積されたノウハウを活かし、製品保管における効率性向上に取り組んでいます。<br> お客様の多様なニーズに応じて、最適な保管システムを提案し、現場の課題を解決します。<br><br> 独自の技術と経験を駆使して、保管スペースの有効活用や管理プロセスの最適化を図り、コスト削減と品質向上を実現します。
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <p class="imgBoxTtl">Long track record</p>
+                        <img src={siteDomein + '20240818112004572684.png'} alt="背景用の画像" width="742" height="402" class="img" />
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h2 class="txtBoxHeadTtl">様々な要望から対応する<br class="spHidden">オーダーメイド型</h2>
+                        </div>
+                        <p class="txt">
+                            エム・エイチ・システム株式会社は、あらゆる製品保管のニーズに応じたカスタマイズソリューションを提供します。<br>
+                            豊富な経験を活かし、クライアントの具体的な要求に応じて柔軟に対応いたします。<br>
+                            <br>
+                            エム・エイチ・システムで開発した台車は、簡単に折りたたむことができ、狭いスペースにも収納可能です。<br>
+                            また、軽量でありながら頑丈な設計により、長期間の使用にも耐えられます。<br>
+                            これにより、保管スペースの最適化が図れ、作業環境の改善や効率化が期待できます。
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <p class="imgBoxTtl">Custom-made</p>
+                        <img src={siteDomein + '20240818112004370679.png'} alt="背景用の画像" width="742" height="402" class="img" />
+                    </div>
+                </div>
+
+                <div class="flex flex-reverse">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h2 class="txtBoxHeadTtl">効率的な保管管理の<br>エキスパート</h2>
+                        </div>
+                        <p class="txt">
+                            エム・エイチ・システム株式会社は、製品保管における効率性を追求し続ける専門家です。<br>
+                            長年の実績をもとに、お客様の多様なニーズに対応した保管による問題を改善いたします。<br>
+                            最先端の技術とノウハウを駆使して、保管スペースの最適化や在庫管理の効率化を実現し、貴社の業務をサポートします。<br>
+                            信頼と品質を第一に、お客様に満足いただけるサービスをお約束します。
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <p class="imgBoxTtl">Management Experts</p>
+                        <img src={siteDomein + '20240818112004245914.png'} alt="背景用の画像" width="742" height="402" class="img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

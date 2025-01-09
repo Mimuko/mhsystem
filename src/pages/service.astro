@@ -1,0 +1,147 @@
+---
+import '../styles/base/_mixin.scss';
+import '../styles/base/_reset.scss';
+import '../styles/base/_variables.scss';
+import '../styles/header.scss';
+import '../styles/footer.scss';
+import '../styles/common.scss';
+import '../styles/service.scss';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "事業内容｜エム・エイチ・システム株式会社";
+const siteDomein = "https://m-h-system.co.jp/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <div class="content">
+        <div class="pageHeader">
+            <div class="pageHeaderBg">
+                <div class="pageHeaderGroup">
+                    <p class="pageHeaderDesc">Service</p>
+                    <h1 class="pageHeaderFront">事業内容</h1>
+                </div>
+                <img width="1440" height="450" src={siteDomein + '20240819212623233840.png'} alt="事業内容" class="pageHeaderImg" width="1411" height="420" />
+            </div>
+        </div>
+        <div class="section">
+            <div class="decoration">
+                <img src={siteDomein + '20240819212623150241.png'} alt="背景用の画像" width="868" height="868" class="img" />
+            </div>
+            <div class="sectionInr mainContent">
+                <div class="serviceBox">
+                    <div class="serviceBoxHead">
+                        <p class="serviceBoxHeadDesc">Storage service that saves space</p>
+                        <h2 class="serviceBoxHeadTtl">省スペース化を実現する<br class="pcHidden">保管サービス</h2>
+                    </div>
+                    <div class="serviceBoxBody">
+                        <div class="serviceBoxBodyTxt">
+                            <p class="txt">エム・エイチ・システムは、限られたスペースを有効に活用するための</p>
+                            <p class="txt blueColor">保管ソリューション</p>
+                            <p class="txt">を提供しています。<br>効率的な収納で業務の効率化を実現します。</p>
+                        </div>
+                        <div class="serviceBoxBodyBg">
+                            <img src={siteDomein + '20240819212623189923.png'} alt="" class="img" width="1100" height="433">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section sectionBg supportSection">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240819212623649275.png'} alt="背景用の画像" width="1440" height="2114" class="img" />
+            </div>
+            <div class="sectionInr mainContent">
+                <div class="flex">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <p class="txtBoxHeadDesc">保管棚のトータルサポート</p>
+                            <h3 class="txtBoxHeadTtl">Total Support</h3>
+                        </div>
+                        <p class="txt">
+                            エム・エイチ・システムは、保管棚の設計から設置、メンテナンスまで一貫したサポートを提供します。<br>
+                            お客様のニーズに合わせたカスタマイズ提案により、最適な収納スペースを実現します。<br>
+                            安全性と効率性を重視した設計で、作業環境の向上を図ります。さらに、定期的な点検と保守サービスにより、長期にわたって安心してご利用いただける保管棚を提供します。<br>
+                            ぜひ、当社のトータルサポートをご活用ください。
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240819212623619725.png'} alt="" class="img" width="663" height="365">
+                    </div>
+                </div>
+
+                <div class="flex flex-reverse">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <p class="txtBoxHeadDesc">保管改善コンサルティング</p>
+                            <h3 class="txtBoxHeadTtl">Consulting</h3>
+                        </div>
+                        <p class="txt">
+                            エム・エイチ・システム株式会社の保管改善コンサルティングサービスは、お客様の現状分析から始まり、最適な保管システムの提案、実施、そしてアフターフォローまでを包括的にサポートします。<br>
+                            専門知識を持つコンサルタントが、スペースの有効活用や在庫管理の効率化を目指し、具体的な改善策を提案します。<br>
+                            <br>
+                            信頼と実績に基づいたコンサルティングで、貴社の保管問題を解決します。
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240819212623757120.png'} alt="" class="img" width="663" height="365">
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <p class="txtBoxHeadDesc">倉庫内の改善サポート</p>
+                            <h3 class="txtBoxHeadTtl">Improvement</h3>
+                        </div>
+                        <p class="txt">
+                            エム・エイチ・システムの倉庫内の改善サポートサービスは、効率的な作業環境の構築を目指し、全面的な支援を提供します。<br>
+                            現場の詳細な分析を基に、レイアウトの最適化や動線の改善、収納システムの見直しなど、具体的な改善策を提案します。<br>
+                            また、最新の技術と設備を導入し、在庫管理や作業効率の向上を図ります。<br>
+                            定期的なフォローアップにより、持続的な改善をサポートし、倉庫運営の効率化とコスト削減を実現します。
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240819212623678587.png'} alt="" class="img" width="663" height="365">
+                    </div>
+                </div>
+
+                <div class="flex flex-reverse">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <p class="txtBoxHeadDesc">耐震診断による地震対策</p>
+                            <h3 class="txtBoxHeadTtl">Countermeasure</h3>
+                        </div>
+                        <p class="txt">
+                            エム・エイチ・システム株式会社の耐震診断サービスは、一級建築士監修のもと保管棚による耐震診断を行います。<br>
+                            診断結果に基づき、具体的な地震対策方法をプラン別で提供します。<br>
+                            最適な補強プランを提案し、工事の実施までサポートします。<br>
+                            地震対策を徹底し、安全で安心な建物環境を実現するための総合的なサービスを提供します。
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240819212623287896.png'} alt="" class="img" width="663" height="365">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

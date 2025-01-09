@@ -1,0 +1,141 @@
+---
+import '../styles/base/_mixin.scss';
+import '../styles/base/_reset.scss';
+import '../styles/base/_variables.scss';
+import '../styles/header.scss';
+import '../styles/footer.scss';
+import '../styles/common.scss';
+import '../styles/company.scss';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "会社概要｜エム・エイチ・システム株式会社";
+const siteDomein = "https://m-h-system.co.jp/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <div class="content">
+        <div class="pageHeader">
+            <div class="pageHeaderBg">
+                <div class="pageHeaderGroup">
+                    <p class="pageHeaderDesc">Company</p>
+                    <h1 class="pageHeaderFront">会社概要</h1>
+                </div>
+                <img width="1440" height="450" src={siteDomein + '20240819224259657413.png'} alt="会社概要" class="pageHeaderImg" width="1411" height="420" />
+            </div>
+        </div>
+        <div class="section greetingSection">
+            <div class="decoration">
+                <img src={siteDomein + '20240819224529161697.png'} alt="背景用の画像" class="img" width="1440" height="793">
+            </div>
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">Greetings</h2>
+                    <p class="sectionHeadDesc">代表挨拶</p>
+                </div>
+                <div class="flex">
+                    <div class="txtBox">
+                        <p class="txt">
+                            弊社のホームページをご覧いただきまして、誠にありがとうございます。<br>
+                            エム・エイチ・システムは、大阪府東大阪市を拠点に、オーダーメイド型の保管棚や倉庫内の改善、そして保管コンサルティングまで、幅広いサービスを提供しております。<br>
+                            <br>
+                            豊富な経験と高い技術力を持つスタッフが、お客様の業務効率化とコスト削減をサポートいたします。<br>
+                            信頼と品質を第一に考え、お客様に満足いただけるサービスを提供するため、日々努力を重ねております。<br>
+                            エム・エイチ・システムは、これからもお客様の期待に応えるべく、さらに成長し続けます。<br>
+                            どうぞ、末永いお付き合いをよろしくお願い申し上げます。
+                        </p>
+                        <p class="txt nameTxt">エム・エイチ・システム株式会社<br>代表　宝蔵 栄次</p>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240819224259656430.png'} alt="ビルの外観画像" width="500" height="373" class="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tileSection">
+            <div class="tileSectionInr">
+                <div class="tile">
+                    <img src={siteDomein + '20240819224259332721.png'} alt="会社内装の写真" class="tileItem" width="340" height="240">
+                </div>
+                <div class="tile">
+                    <img src={siteDomein + '20240819224259322533.png'} alt="会社内装の写真" class="tileItem" width="340" height="240">
+                </div>
+                <div class="tile">
+                    <img src={siteDomein + '20240819224259610064.png'} alt="会社内装の写真" class="tileItem" width="340" height="240">
+                </div>
+            </div>
+        </div>
+        <div class="section sectionBg companySection">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240819224259847334.png'} alt="背景用の画像" width="1440" height="762" class="img" />
+            </div>
+			<div class="sectionInr">
+				<div class="sectionHead">
+					<h2 class="sectionHeadTtl">Company</h2>
+					<p class="sectionHeadDesc">会社概要</p>
+				</div>
+				<div class="data">
+					<div class="dataItem">
+						<p class="dataItemHead">会社名</p>
+						<p class="txt">エム・エイチ・システム株式会社</p>
+					</div>
+                    <div class="dataItem">
+						<p class="dataItemHead">代表</p>
+						<p class="txt">宝蔵 栄次</p>
+					</div>
+					<div class="dataItem">
+						<p class="dataItemHead">TEL</p>
+						<a href="tel:0729808780">
+							<p class="txt">072-980-8780</p>
+						</a>
+					</div>
+					<div class="dataItem">
+						<p class="dataItemHead">営業時間</p>
+						<p class="txt">9:00-18:00</p>
+					</div>
+                    <div class="dataItem">
+						<p class="dataItemHead">定休日</p>
+						<p class="txt">土日祝</p>
+					</div>
+                    <div class="dataItem">
+						<p class="dataItemHead">本所</p>
+						<p class="txt">〒579-8046　大阪府東大阪市昭和町12-18</p>
+					</div>
+                    <div class="dataItem">
+						<p class="dataItemHead">設立</p>
+						<p class="txt">2000年10月</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+        <div class="section">
+			<div class="sectionInr">
+				<div class="sectionHead">
+					<h2 class="sectionHeadTtl">Access</h2>
+					<p class="sectionHeadDesc">アクセス</p>
+				</div>
+				<div class="googleMap">
+                    <p>データブロックエリア</p>
+                </div>
+			</div>
+		</div>
+    </div>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

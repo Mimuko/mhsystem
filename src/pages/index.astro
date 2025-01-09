@@ -1,11 +1,243 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import '../styles/base/_mixin.scss';
+import '../styles/base/_reset.scss';
+import '../styles/base/_variables.scss';
+import '../styles/header.scss';
+import '../styles/footer.scss';
+import '../styles/common.scss';
+import '../styles/top.scss';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "トップページ｜エム・エイチ・システム株式会社";
+const siteDomein = "https://m-h-system.co.jp/system_panel/uploads/images/";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <div class="content">
+        <div class="firstView">
+            <p class="firstViewCopy">Made-to-order</p>
+            <div class="firstViewImg">
+                <img src={siteDomein + '20240812173534506640.png'} alt="ファーストビュー背景画像" class="img" />
+            </div>
+            <div class="firstViewHead">
+                <div class="firstViewDesc">
+                    <p class="firstViewDescLarge">倉庫・物流センターの課題</p>
+                    <p class="firstViewDescSmall">を解決する</p>
+                </div>
+                <div class="firstViewTtl">
+                    <p>お客様のニーズ、作業形態にマッチした</p>
+                    <p>保管棚、作業台車、垂直搬送設備で</p>
+                    <h1>トータルサポート</h1>
+                </div>
+            </div>
+            <div class="firstViewScroll">
+                <p class="scrollTxt">SCROLL</p>
+                <div class="firstViewScrollImg">
+                    <img src={siteDomein + '20240812173534725593.png'} alt="スクロールを促す矢印の画像" width="10" height="145">
+                </div>
+            </div>
+        </div>
+        <div class="section aboutSection">
+            <div class="decoration">
+                <img src={siteDomein + '20240812173534588265.png'} alt="装飾用の画像" width="430" height="949" class="decorationImg">
+            </div>
+            <div class="sectionInr">
+                <div class="flex">
+                    <div class="imgBox largeImgBox">
+                        <img src={siteDomein + '20240812173534478223.png'} alt="提供しているサービスのイメージ画像" width="492" height="726" class="img" />
+                    </div>
+                    <div class="txtBox">
+                        <div class="sectionHead">
+                            <h2 class="sectionHeadTtl">About Us</h2>
+                            <p class="sectionHeadDesc">私たちについて</p>
+                        </div>
+                        <h3 class="sectionSubTtl">お客様の保管の<br>ビジョンを形にします</h3>
+                        <p class="txt">
+                            エム・エイチ・システム株式会社は、大阪府東大阪市で、倉庫雇用などの保管棚をオーダーメイドでトータルサポートし、保管に関する効率化のコンサルティングから改善を効率的にできる人材の育成をしています。<br>
+                            <br>
+                            そのため、お客様のニーズに合わせた最適な保管サービスをご提案し、業務改善に向けたサポートを行っています。<br>
+                            お客様の課題解決に向けて、豊富な経験と高い専門性を発揮してまいります。
+                        </p>
+                        <a href="./company" class="normalBtn">
+                            <p class="normalBtnTxt">会社概要</p>
+                            <p class="normalBtnIcon">
+                                <img src={siteDomein + '20240815122141386249.png'} alt="右向き矢印の画像アイコン" width="24" height="24" class="img icon">
+                                <img src={siteDomein + '20240815122141359996.png'} alt="右向き矢印の画像アイコン" width="24" height="24" class="img iconHover">
+                            </p>
+                        </a>
+                    </div>
+                    <div class="imgBox smallImgBox">
+                        <img src={siteDomein + '20240812173534248776.png'} alt="提供しているサービスのイメージ画像" width="295" height="419" class="img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section serviceSection sectionBg">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240812173534272427.png'} alt="背景用の画像" width="1440" height="730" class="img" />
+            </div>
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">Service</h2>
+                    <p class="sectionHeadDesc">事業内容</p>
+                </div>
+                <div class="flex">
+                    <div class="serviceItem">
+                        <img src={siteDomein + '20240812173534918496.png'} alt="保管棚のトータルサポート" class="img" width="350" height="240">
+                        <div class="serviceItemHead">
+                            <h3 class="serviceItemTtl">保管棚のトータルサポート</h3>
+                        </div>
+                    </div>
+                    <div class="serviceItem">
+                        <img src={siteDomein + '20240820224429655130.png'} alt="保管改善コンサルティング" class="img" width="350" height="240">
+                        <div class="serviceItemHead">
+                            <h3 class="serviceItemTtl">保管改善コンサルティング</h3>
+                        </div>
+                    </div>
+                    <div class="serviceItem">
+                        <img src={siteDomein + '20240812173534167012.png'} alt="倉庫内の改善サポート" class="img" width="350" height="240">
+                        <div class="serviceItemHead">
+                            <h3 class="serviceItemTtl">倉庫内の改善サポート</h3>
+                        </div>
+                    </div>
+                </div>
+                <p class="txt whiteColor">
+                    エム・エイチ・システム株式会社は、企業の保管ニーズに応じたトータルサポートを提供し、<br class="spHidden">
+                    効率的な保管システムの導入を支援します。<br>
+                    <br>
+                    現状の保管方法を分析し、効率化とコスト削減を目指した改善策を提案します。<br>
+                    保管業務の効率化を図るための人材育成プログラムを提供し、現場スタッフのスキルアップをサポートします。
+                </p>
+                <a href="./service" class="normalBtn">
+                    <p class="normalBtnTxt">事業内容</p>
+                    <p class="normalBtnIcon">
+                        <img src={siteDomein + '20240815122141359996.png'} alt="右向き矢印の画像アイコン" width="24" height="24" class="img icon">
+                        <img src={siteDomein + '20240815122141386249.png'} alt="右向き矢印の画像アイコン" width="24" height="24" class="img iconHover">
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="section worksSection includeSection">
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">Works</h2>
+                    <p class="sectionHeadDesc">施工事例</p>
+                </div>
+                <div class="includeArea">
+                    <p>データブロックエリア</p>
+                </div>
+                <a href="./works" class="normalBtn">
+                    <p class="normalBtnTxt">施工事例一覧</p>
+                    <p class="normalBtnIcon">
+                        <img src={siteDomein + '20240815122141386249.png'} alt="右向き矢印の画像アイコン" width="24" height="24" class="img icon">
+                        <img src={siteDomein + '20240815122141359996.png'} alt="右向き矢印の画像アイコン" width="24" height="24" class="img iconHover">
+                    </p>
+                </a>
+            </div>
+            <p class="decorationTxt">
+                Construction examples<br>of M.H. System
+            </p>
+        </div>
+        <div class="section">
+            <img src={siteDomein + '20240812173534518710.png'} alt="背景用の画像" width="1440" height="425" class="img" />
+        </div>
+
+        <div class="section strengthsSection">
+            <div class="sectionBg">
+                <div class="sectionInr">
+                    <div class="sectionHead">
+                        <h2 class="sectionHeadTtl">Strengths</h2>
+                        <p class="sectionHeadDesc">エム・エイチ・システムの強み</p>
+                    </div>
+                    <p class="decorationTxt">A proven expert who provides total support for storage in<br>factories and other facilities and solves storage issues</p>
+                    <div class="flex">
+                        <div class="txtBox">
+                            <div class="h3head">
+                                <h3 class="h3headTtl">
+                                    工場などの保管の<br>トータルサポート
+                                </h3>
+                                <p class="h3headDesc">Total support for storage in factories, etc.</p>
+                            </div>
+                            <p class="txt">
+                                エム・エイチ・システム株式会社は、工場や倉庫などの収納管理に関して長年の実績を持つ専門家集団です。<br>
+                                お客様の課題に寄り添い、収納スペースの最適化から在庫管理の効率化まで、あらゆる収納に関する課題をトータルにサポートいたします。<br>
+                                豊富な経験と高度な技術力を活かし、現場の生産性向上に貢献する最適な保管に関するサービスをご提案します。
+                            </p>
+                        </div>
+                        <div class="imgBox">
+                            <img src={siteDomein + '20240812173534196390.png'} alt="工場などの保管のトータルサポート" class="img" width="662" height="368">
+                        </div>
+                    </div>
+                    <div class="flex flex-reverse">
+                        <div class="txtBox">
+                            <div class="h3head">
+                                <h3 class="h3headTtl">
+                                    保管の課題を解決する<br>実績豊富な専門家
+                                </h3>
+                                <p class="h3headDesc">Proven experts in solving storage challenges</p>
+                            </div>
+                            <p class="txt">
+                                エム・エイチ・システム株式会社は、工場や倉庫・物流センターの保管管理に関して長年の実績があります。<br>
+                                お客様の課題に寄り添い、収納スペースの有効活用から在庫管理の効率化まで、あらゆる保管に関する課題に包括的にアプローチいたします。<br>
+                                豊富な経験と高度な技術力を活かし、保管の課題を解決し、工場や倉庫の業務効率化をサポートいたします。
+                            </p>
+                        </div>
+                        <div class="imgBox">
+                            <img src={siteDomein + '20240812173534875725.png'} alt="保管の課題を解決する実績豊富な専門家" class="img" width="662" height="368">
+                        </div>
+                    </div>
+                    <a href="./strengths" class="normalBtn">
+                        <p class="normalBtnTxt">強み</p>
+                        <p class="normalBtnIcon">
+                            <img src={siteDomein + '20240815122141386249.png'} alt="右向き矢印の画像アイコン" width="24" height="24" class="img icon">
+                            <img src={siteDomein + '20240815122141359996.png'} alt="右向き矢印の画像アイコン" width="24" height="24" class="img iconHover">
+                        </p>
+                    </a>
+                </div>
+
+            </div>
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240815132702986180.png'} alt="背景用の画像" width="1440" height="1255" class="img" />
+            </div>
+
+        </div>
+
+        <div class="section newsSection includeSection">
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">News</h2>
+                    <p class="sectionHeadDesc">新着情報</p>
+                </div>
+                <div class="includeArea">
+                    <p>データブロックエリア</p>
+                </div>
+                <a href="./news" class="normalBtn">
+                    <p class="normalBtnTxt">記事一覧</p>
+                    <p class="normalBtnIcon">
+                        <img src={siteDomein + '20240815122141386249.png'} alt="右向き矢印の画像アイコン" width="24" height="24" class="img icon">
+                        <img src={siteDomein + '20240815122141359996.png'} alt="右向き矢印の画像アイコン" width="24" height="24" class="img iconHover">
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
