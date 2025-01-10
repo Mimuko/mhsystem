@@ -115,6 +115,7 @@
 
 .footerAddress {
     text-align: center;
+    font-style: normal;
     @include m.mq(lg) {
         width: 100%;
         text-align: left;

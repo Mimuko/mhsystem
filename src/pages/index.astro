@@ -26,8 +26,8 @@ const siteDomein = "https://m-h-system.co.jp/system_panel/uploads/images/";
 
 <body class="wrap">
 	<Header />
-    <div class="content">
-        <div class="firstView">
+    <main class="content">
+        <section class="firstView">
             <p class="firstViewCopy">Made-to-order</p>
             <div class="firstViewImg">
                 <img src={siteDomein + '20240812173534506640.png'} alt="ファーストビュー背景画像" class="img" />
@@ -49,8 +49,8 @@ const siteDomein = "https://m-h-system.co.jp/system_panel/uploads/images/";
                     <img src={siteDomein + '20240812173534725593.png'} alt="スクロールを促す矢印の画像" width="10" height="145">
                 </div>
             </div>
-        </div>
-        <div class="section aboutSection">
+        </section>
+        <section class="section aboutSection">
             <div class="decoration">
                 <img src={siteDomein + '20240812173534588265.png'} alt="装飾用の画像" width="430" height="949" class="decorationImg">
             </div>
@@ -84,9 +84,9 @@ const siteDomein = "https://m-h-system.co.jp/system_panel/uploads/images/";
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section serviceSection sectionBg">
+        <section class="section serviceSection sectionBg">
             <div class="sectionBgImg">
                 <img src={siteDomein + '20240812173534272427.png'} alt="背景用の画像" width="1440" height="730" class="img" />
             </div>
@@ -130,15 +130,15 @@ const siteDomein = "https://m-h-system.co.jp/system_panel/uploads/images/";
                     </p>
                 </a>
             </div>
-        </div>
-        <div class="section worksSection includeSection">
+        </section>
+        <section class="section worksSection includeSection">
             <div class="sectionInr">
                 <div class="sectionHead">
                     <h2 class="sectionHeadTtl">Works</h2>
                     <p class="sectionHeadDesc">施工事例</p>
                 </div>
                 <div class="includeArea">
-                    <p>データブロックエリア</p>
+                    <p>CMSコンテンツエリア</p>
                 </div>
                 <a href="./works" class="normalBtn">
                     <p class="normalBtnTxt">施工事例一覧</p>
@@ -151,12 +151,12 @@ const siteDomein = "https://m-h-system.co.jp/system_panel/uploads/images/";
             <p class="decorationTxt">
                 Construction examples<br>of M.H. System
             </p>
-        </div>
+        </section>
         <div class="section">
             <img src={siteDomein + '20240812173534518710.png'} alt="背景用の画像" width="1440" height="425" class="img" />
         </div>
 
-        <div class="section strengthsSection">
+        <section class="section strengthsSection">
             <div class="sectionBg">
                 <div class="sectionInr">
                     <div class="sectionHead">
@@ -214,16 +214,16 @@ const siteDomein = "https://m-h-system.co.jp/system_panel/uploads/images/";
                 <img src={siteDomein + '20240815132702986180.png'} alt="背景用の画像" width="1440" height="1255" class="img" />
             </div>
 
-        </div>
+        </section>
 
-        <div class="section newsSection includeSection">
+        <section class="section newsSection includeSection">
             <div class="sectionInr">
                 <div class="sectionHead">
                     <h2 class="sectionHeadTtl">News</h2>
                     <p class="sectionHeadDesc">新着情報</p>
                 </div>
                 <div class="includeArea">
-                    <p>データブロックエリア</p>
+                    <p>CMSコンテンツエリア</p>
                 </div>
                 <a href="./news" class="normalBtn">
                     <p class="normalBtnTxt">記事一覧</p>
@@ -233,8 +233,8 @@ const siteDomein = "https://m-h-system.co.jp/system_panel/uploads/images/";
                     </p>
                 </a>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 	<Footer />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../assets/js/script.js"></script>
